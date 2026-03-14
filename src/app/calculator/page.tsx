@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useAppStore } from '@/store/appStore'
+import { PreventAscvdCalculator } from '@/components/PreventAscvdCalculator'
 
 // ─── 2026 ACC/AHA Dyslipidemia Guideline Calculators ─────────────────────────
 // Tab 1: LDL-C Goal Finder — based on Lipoprotein Goals figure
@@ -10,6 +11,7 @@ import { useAppStore } from '@/store/appStore'
 const calculatorTabs = [
   { id: 'ldl-goals', label: 'LDL-C Goal Finder', description: 'Statin intensity & targets' },
   { id: 'tg-categorizer', label: 'TG Severity & Action', description: 'TG categorization & Rx' },
+  { id: 'prevent-ascvd', label: 'PREVENT ASCVD', description: '10-year ASCVD risk' },
 ]
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -1092,6 +1094,7 @@ export default function CalculatorPage() {
       {/* Tab Content */}
       {calculatorTab === 'ldl-goals' && <LDLGoalFinder />}
       {calculatorTab === 'tg-categorizer' && <TGCategorizerCalculator />}
+      {calculatorTab === 'prevent-ascvd' && <PreventAscvdCalculator />}
     </div>
   )
 }
