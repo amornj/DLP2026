@@ -35,7 +35,7 @@ export const useAppStore = create<AppState>()(
       specialistsTab: 'children',
       setSpecialistsTab: (tab) => set({ specialistsTab: tab }),
 
-      calculatorTab: 'prevent-ascvd',
+      calculatorTab: 'ldl-goals',
       setCalculatorTab: (tab) => set({ calculatorTab: tab }),
 
       resetAll: () => set({
@@ -43,7 +43,7 @@ export const useAppStore = create<AppState>()(
         classificationTab: 'prevent',
         treatmentTab: 'lifestyle',
         specialistsTab: 'children',
-        calculatorTab: 'prevent-ascvd',
+        calculatorTab: 'ldl-goals',
       }),
     }),
     { name: 'dlp2026-app' }
